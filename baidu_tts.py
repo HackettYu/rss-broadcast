@@ -21,10 +21,16 @@ class TTS:
 
         # 识别正确返回语音二进制 错误则返回dict 参照下面错误码
         if not isinstance(result, dict):
-            text = text.split('/')[-1]
-            text = text.split(' ')[-1]
+            # text = text.split('/')[-1]
+            # text = text.split(' ')[-1]
+            # text = text.split(')')[-1]
+            # text = text.split('(')[-1]
+            # text = text.split('_')[-1]
+            text = 0
             with open(f'mp3/auido_{text}.mp3', 'wb') as f:
-                f.write(result)
+                if(len(result) < 1000):
+                    f.write(result)
+                    text = text + 1
         elif isinstance(result, dict):
             pass
             # if result.err_no == 500:

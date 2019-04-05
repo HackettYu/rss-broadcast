@@ -1,4 +1,4 @@
-#-*- coding:utf-8 -*-
+﻿#-*- coding:utf-8 -*-
 from lxml import etree
 from io import StringIO, BytesIO
 import urllib.request as request
@@ -87,5 +87,5 @@ def parseXMLByUrl(url):
     #         f.write(request.urlopen(el.attrib['src']).read())
 
 
-parseXMLByUrl("https://rsshub.app/dysfz")
+parseXMLByUrl("https://rsshub.app/duozhi")
 # parseXMLByFile(rb"dysfz.xml")
